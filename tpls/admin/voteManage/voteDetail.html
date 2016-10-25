@@ -1,0 +1,24 @@
+<div class="top_title" >
+	<span style="margin-left:15px">投票管理</span>
+	<span style="font-size:19px;">
+		<span ng-if="detailUrl == '/detailInfo'">投票详情</span>
+		<span ng-if="detailUrl == '/progressStats'">投票进度统计</span>
+		<span ng-if="detailUrl == '/resultStats'">投票结果统计</span>
+	</span>
+
+</div>
+<div class="col-xs-12 " style="padding:40px;">
+	<div class="manageWrap" style="padding:30px 55px">
+		<div class="row">
+			<ul class="nav homenav">
+				<li ng-class="{'active': detailUrl == '/detailInfo'}" class="col-xs-12 col-md-3"><a href="" ui-sref=".detailInfo" ng-click="detailUrl = '/detailInfo'">投票详情</a></li>
+				<li ng-class="{'active': detailUrl == '/progressStats'}" class="col-xs-12 col-md-3"><a href="" ui-sref=".progressStats" ng-click="detailUrl = '/progressStats'">投票进度统计</a></li>
+				<li ng-class="{'active': detailUrl == '/resultStats'}" class="col-xs-12 col-md-3"><a href="" ui-sref=".resultStats" ng-click="detailUrl = '/resultStats'">投票结果统计</a></li>	
+			</ul>
+			<div class="line"></div>
+		</div>
+		<div class="row">
+			<div ui-view></div>
+		</div>
+	</div>
+</div>

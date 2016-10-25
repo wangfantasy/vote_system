@@ -1,0 +1,115 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sm-12 searchbar">
+			<form class="form-inline" role="form">
+				<div class="form-group">
+					<label for="">模板名称：</label> <input type="text" class="form-control"
+						id="" name="" placeholder="">
+				</div>
+				<div class="form-group">
+					<label for="">创建人：</label> 
+					<select name="" id="" class="form-control">
+						<option value="">请选择</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label for="">应用投票：</label>
+					<input type="text" class="form-control"
+						id="" name="" placeholder="">
+				</div>
+				<div class="form-group">
+					<button class="btn btn-default">搜索</button>
+				</div>
+				<div class="right">
+					<button class="btn btn-primary" ng-click="newTemplateModal()">新建模板</button>
+				</div>
+				<div class="clearfix"></div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="newTemplateModal">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<span>新建模板</span>
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+			</div>
+			<div class="modal-body">
+				
+				<form class="form-inline">
+					<table class="newTemplateTable">
+						<tbody>
+							<tr>
+								<td>模板名称：</td>
+								<td><input type="text" class="form-control" id="" placeholder=""></td>
+							</tr>
+							<tr>
+								<td>属性名称：</td>
+								<td>
+									<input type="text" class="form-control" id="" placeholder="">
+									<select name="" id="" class="form-control">
+										<option value="">选择属性类型</option>
+									</select>
+									<a href=""><span class="glyphicon glyphicon-remove-circle"></span></a>
+								</td>
+							</tr>
+							<tr>
+								<td>属性名称：</td>
+								<td>
+									<input type="text" class="form-control" id="" placeholder="">
+									<select name="" id="" class="form-control">
+										<option value="">选择属性类型</option>
+									</select>
+									<a href=""><span class="glyphicon glyphicon-remove-circle"></span></a>
+								</td>
+							</tr>
+							<tr>
+								<td><button type="button" class="btn btn-default">新增属性</button></td>
+								<td></td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="formFoot">
+						<button type="button" class="btn btn-default">保存</button>
+						<button type="button" class="btn btn-default">预览</button>
+						<button type="button" class="btn btn-default">取消</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-10 main_content">
+			<div class="tableTitle">
+				<span class="titleLeft">管理员列表</span>
+				<span class="titleRight">共1项</span>
+				<span class="clearfix"></span>
+			</div>
+			<div class="table-responsive col-sm-4">
+				<div class="templateItem">
+					<div>职称申报投票对象数据模块</div>
+					<div>
+						<span>应用次数：3</span>
+						<span>创建人：张三</span>
+						<span>创建时间：2016-10-10</span>
+					</div>
+				</div>
+			</div>
+			<div class="table-responsive col-sm-4">
+				<div class="templateItem">
+					<div>职称申报投票对象数据模块</div>
+					<div>
+						<span>应用次数：3</span>
+						<span>创建人：张三</span>
+						<span>创建时间：2016-10-10</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+</div>

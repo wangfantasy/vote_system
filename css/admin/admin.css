@@ -1,0 +1,596 @@
+/*管理员首页样式开始*/
+.adminnav.navbar{
+	color: #fff;
+	background: #02549E;
+	border-radius: 0;
+	margin-bottom: 0;
+}
+
+.adminnav.navbar-inverse{
+	border: 0;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: #fff;
+}
+.navbar-inverse .navbar-nav>.open>a, .navbar-inverse .navbar-nav>.open>a:focus, .navbar-inverse .navbar-nav>.open>a:hover {
+    color: #fff;
+    background-color: #043D6F;
+}
+.adminnav.navbar-inverse .logo{
+	width: 48px;
+	margin-right: 10px;
+	margin-bottom: 5px;
+	height: 41px;
+}
+.adminnav .navbar-header .logoText{
+	display: inline-block;
+	border-left: 1px solid #fff;
+	height: 40px;
+	margin:7px 0;
+	padding-left: 10px;
+	line-height: 40px;
+	font-size: 20px;
+	font-weight: bold;
+
+}
+
+img.navphoto{
+	width: 26px;
+	height: 26px;
+	border-radius: 13px;
+}
+.userinfo .dropdown-menu{
+	min-width: 0;
+}
+.adminnav .navbar-inverse .navbar-nav>li>a {
+     color: #7CB9F1; 
+}
+.adminnav .userinfo .dropdown-menu>li>a:focus,.userinfo .dropdown-menu>li>a:hover {
+    color: #fff;
+    background-color: #E5403F;
+    border-radius: 4px;
+    width: 110px;
+    margin:auto;
+}
+.top_title{
+	height: 50px;
+	background: #fff;
+	font-size: 23px;
+	line-height: 50px;
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+	top: 56px;
+}
+/*侧边栏*/
+.navaside{
+	background-color: #005AAB;
+	height: 90%;
+	display: inline-block;
+	padding: 0;
+}
+.navaside ul{
+	margin-top: 50px;
+}
+@media (max-width: 768px) {
+	.navaside{
+		height: auto;
+	}
+}
+.navaside li{
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	font-size: 16px;
+}
+.navaside a{
+	color: #fff;
+}
+.navaside a:hover,.navaside a:focus{
+	color: #005AAB;
+	text-decoration: none;
+}
+.navaside a:hover>li,.navaside a:focus>li{
+	background-color: #fff;
+}
+
+
+input::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+
+.sectionTitle{
+	height: 30px;
+	line-height: 30px;
+	padding: 0 5px;
+	font-weight: bold;
+}
+.manageWrap{
+	background-color: #fff;
+	margin-bottom: 30px;
+}
+.manageTitle{
+	padding: 0 20px;
+	height: 50px;
+	line-height: 50px;
+	font-size: 20px;
+	font-weight: 500;
+	border-bottom: 1px solid #eee;
+}
+.home_activityItem{
+	padding: 10px;
+}
+.home_activityItem>div{
+	cursor: pointer;
+	height: 100%;
+	padding: 10px 15px;
+	position: relative;
+	-webkit-box-shadow: 0px 0px 20px 1px #ddd;
+	-moz-box-shadow: 0px 0px 20px 1px #ddd;
+	box-shadow: 0px 0px 20px 1px #ddd;
+	background-color: #fff;
+}
+.home_activityItem>div>div:first-of-type{
+	font-size: 16px;
+    height: 61px;
+    line-height: 61px;
+}
+.home_activityItem .progress{
+	height: 10px;
+}
+.activityFlag{
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.adminItem{
+	padding: 30px 40px;
+}
+.adminItem>div>div:first-child{
+	height: 130px;
+	line-height: 115px;
+	font-size: 40px;
+	text-align: center;
+}
+.adminItem>div>div:last-child{
+	height: 50px;
+	line-height: 50px;
+	font-size: 24px;
+	text-align: center;
+	color: #fff;
+}
+.adminItem .blue{
+	border: 1px solid #005aab;
+}
+.adminItem>div.blue>div:last-child{
+	background-color: #005aab;
+}
+.adminItem .cyan{
+	border: 1px solid #5bc0de;
+}
+.adminItem>div.cyan>div:last-child{
+	background-color: #5bc0de;
+}
+.adminItem .green{
+	border: 1px solid #7fc241;
+}
+.adminItem>div.green>div:last-child{
+	background-color: #7fc241;
+}
+
+/*管理员首页样式结束*/
+
+/*用户管理页样式开始*/
+.tableTitle{
+	height: 40px;
+	font-size: 18px;
+	line-height: 40px;
+}
+.tableTitle .titleLeft{
+	color: #005aab;
+}
+.tableTitle .titleRight{
+	float: right;
+	margin:5px;
+}
+.table tr{
+	height: 65px;
+	font-size: 15px;
+	line-height: 65px;
+}
+.table th{
+	font-size: 17px;
+}
+.table>tbody>tr>td{
+	vertical-align: middle;
+}
+
+
+/*用户管理页样式结束*/
+
+/*新建用户组页样式开始*/
+.groupInfo td{
+	padding: 5px;
+	vertical-align: top;
+}
+.groupName input{
+	width: 250px;
+}
+
+.groupDesc textarea{
+	width: 400px;
+}
+
+.memberAdd{
+	margin: 10px auto;
+}
+/*.memberAdd>button{
+	margin-right: 30px;
+}*/
+
+.formFoot{
+	margin: 50px 0 10px;
+	text-align: center;
+}
+
+.formFoot button{
+	width: 100px;
+	margin: 0 20px;
+}
+/*新建用户组页样式结束*/
+
+/*模板管理页样式开始*/
+.templateItem{
+	/*display: inline-block;*/
+	border:1px solid #000;
+	padding: 10px;
+	margin: 10px 0;
+}
+.templateItem>div:first-child{
+	font-size: 18px;
+	height: 30px;
+	line-height: 30px;
+}
+.templateItem span{
+	display: block;
+	margin: 2px 0;
+}
+.detailTable{
+	width: 100%;
+}
+.detailTable td{
+	padding: 5px;
+}
+.newTemplateTable td{
+	padding: 5px;
+}
+
+/*模板管理页样式结束*/
+
+/*投票管理页样式开始*/
+.homenav {
+	height: 50px;
+	font-size: 18px;
+}
+.homenav li{
+	display: inline-block;
+	position: relative;
+	z-index: 2;
+	height: 52px;
+	text-align: center;
+	/*width: 120px;*/
+}
+.homenav li.active a{
+	color: #005AAB;
+	border-bottom: 3px solid #005AAB;
+}
+.homenav li>a{
+	color: #000;
+}
+.homenav li>a:hover,.homenav li>a:focus{
+	background-color: #fff;
+}
+.homenav~.line{
+	border-bottom: 1px solid #ddd;
+	height: 1px;
+	position: relative;
+	top: -3px;
+	z-index: 1;
+}
+.searchbar{
+	margin-top: 10px;
+	font-size: 16px;
+	border-bottom: 1px solid #eee;
+	padding-bottom: 30px;
+	margin-bottom: 30px;
+}
+.searchbar .form-group{
+	margin-right: 10px;
+}
+.voteManageItem{
+	margin: 12px;
+	text-align: center;
+	color: #fff;
+	position: relative;
+}
+.voteManageItem>.panel-heading{
+	height: 140px;
+	line-height: 130px;
+	font-size: 20px;
+	background-color: #5e96d5;
+	border:0;
+	color: #fff;
+}
+.voteManageItem>.panel-body{
+	position: relative;
+	background: url(../../img/vote.jpg) no-repeat;
+	background-color: #67a0e0;
+	background-size: 280px 205px;
+	padding: 40px 0;
+	line-height: 24px;
+}
+.voteManageItem>.panel-body p{
+	position: relative;
+	z-index: 1;
+}
+.voteManageItem>.panel{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	z-index: 2;
+}
+.voteManageItem>.panel>.panel-body{
+	font-size: 18px;
+	text-align: center;
+	
+	padding: 30px 20px;
+}
+.voteManageItem>.panel>.panel-body>div:first-child{
+	height: 244px;
+	line-height: 34px;
+}
+.voteManageItem>.panel>.panel-body>div:last-child>button,.voteManageItem>.panel>.panel-body>div:last-child>a{
+	background: none;
+	border: 1px solid #fff;
+}
+/*投票管理页样式结束*/
+
+/*投票详情页样式开始*/
+.voteDetailBody{
+	padding: 50px 140px;
+	font-size: 17px;
+}
+.voteDetailContent{
+	line-height: 50px;
+}
+.voteDetailContent>p>span:first-of-type{
+	font-weight: bold;
+}
+
+@media (max-width: 768px) {
+	.voteDetailBody{
+		padding: 5px;
+		font-size: 14px;
+	}
+	.voteDetailContent{
+		line-height: 30px;
+	}
+}
+
+.voteDetailFoot{
+	text-align: center;
+	margin-top: 60px;
+}
+.voteDetailFoot button{
+	margin: 0 10px;
+}
+
+.progressStatsBody{
+	padding: 10px 40px;
+}
+.chart{
+	text-align: center;
+	padding: 35px 0;
+	border-bottom: 1px solid #ddd;
+}
+.chart>div:first-child{
+	border-right: 1px solid #ddd;
+}
+.chart>div:nth-child(2){    
+    font-size: 20px;
+    line-height: 70px;
+}
+.chartSample{
+	font-size: 16px;
+}
+.chartSample span{
+	display: inline-block;
+	width: 170px;
+	text-align: center;
+	height: 35px;
+	line-height: 35px;
+	cursor:pointer;
+}
+
+.beforeblack:before{
+	content: "■";
+	color:black;
+	font-size: 20px;
+	position: relative;
+	top: -1px;
+	margin-right: 3px;
+}
+.beforeblue:before{
+	content: "■";
+	color:#7fc241;
+	font-size: 20px;
+	position: relative;
+	top: -1px;
+	margin-right: 3px;
+}
+.beforered:before{
+	content: "■";
+	color:#5bc0de;
+	font-size: 20px;
+	position: relative;
+	top: -1px;
+	margin-right: 3px;
+}
+.beforegreen:before{
+	content: "■";
+	color:#116ed6;
+	font-size: 20px;
+	position: relative;
+	top: -1px;
+	margin-right: 3px;
+}
+
+
+/*投票详情页样式结束*/
+
+/*新建投票页样式开始*/
+.voteInfoForm input,.voteInfoForm textarea,.voteInfoForm select{
+	display: inline-block;
+}
+.formTitle{
+	height: 40px;
+	line-height: 40px;
+}
+
+.formTitle span{
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.voteTopic input{
+	width: 300px;
+}
+
+.voteDesc label{
+	vertical-align: top;
+}
+.voteDesc textarea{
+	width: 550px;
+}
+
+.voteChk{
+	margin-left: 74px;
+}
+.voteChk label{
+	margin-right: 40px;
+}
+.voteObj input:first-of-type{
+	width: 100px;
+}
+.voteObj input:nth-of-type(2){
+	width: 50px;
+}
+.voteObj input:nth-of-type(3){
+	width: 200px;
+}
+.formTitle2{
+	font-size:15px;
+	margin: 10px 0;
+}
+.votePeople>div:first-of-type input,.votePeople>div:first-of-type select{
+	width: 150px;
+}
+.votePeopleGroup{
+	vertical-align: top;
+	height: 35px;
+	line-height: 35px;
+	margin-right: 40px;
+}
+.votePeopleOpt{
+	display: inline-block;
+}
+.votePeopleOpt input,.votePeopleOpt select{
+	width: 110px;
+}
+.voteNum{
+	display: inline-block;
+	/*border:1px dotted #333;*/
+}
+.multipeSelect{
+	display: inline-block;
+	width: 150px;
+}
+
+/*新建投票页样式结束*/
+
+/*新建投票对象-模板页样式开始*/
+.templateBody>div:first-child{
+	text-align: center;
+	font-size: 25px;
+	font-weight: bold;
+
+}
+.templateBody>div:last-child{
+	text-align: center;
+}
+.templateBody>div:last-child a{
+	width: 230px;
+	height: 120px;
+	text-align: center;
+	line-height: 110px;
+	margin: 15px 20px;
+}
+
+
+/*新建投票对象-模板页样式结束*/
+
+/*新建投票对象页样式开始*/
+.voteObjForm>div:first-child{
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+}
+.voteObjForm td{
+	padding: 5px 2px;
+}
+.voteObjForm form>div:not(:last-child){
+	display: inline-block;
+}
+
+.voteObjForm form>div:last-child{
+	text-align: center;
+}
+.voteObjForm form>div:last-child button{
+	margin:5px 20px;
+	width: 100px;
+}
+
+.voteObjForm input,.voteObjForm select{
+	display: inline-block;
+}
+.voteObjForm .formTop input,.voteObjForm .formTop select{
+	width: 200px;
+}
+.photo{
+	vertical-align: top;
+	margin-left: 250px;
+}
+.photo div:first-child{
+	display: inline-block;
+	width: 120px;
+	height: 135px;
+	border: 1px solid #000;
+}
+.photo div:last-child{
+	text-align: center;
+}
+.voteObjForm .formMiddle input{
+	width: 50px;
+}
+
+.voteObjForm .formBottom input{
+	width: 100px;
+}
+
+/*新建投票对象页样式结束*/

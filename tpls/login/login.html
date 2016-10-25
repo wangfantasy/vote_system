@@ -1,0 +1,39 @@
+<div class="loginBg">
+	<div class="login_main">
+		<div class="loginTitle">
+			<h1>上海飞机设计研究院职称申报投票系统</h1>
+		</div>
+		<div class="loginDiv">
+			<form role="form" class="form-horizontal">
+				<ul class="identityRadio">
+					<label>
+						<li ng-class="{'active': account.role_id == '0'}">
+							<input type="radio" name="identity" value=0 ng-model="account.role_id" selected>
+							用户
+						</li>
+					</label>
+					<label>
+						<li ng-class="{'active': account.role_id == '1'}">
+							<input type="radio" name="identity" value=1 ng-model="account.role_id">
+							管理员
+						</li>
+					</label>
+				</ul>
+				<div class="loginBody">
+					<div class="form-group">
+						<input type="text" class="form-control input-sm" id="" placeholder="用户名" ng-model="account.job_num">
+					</div>
+					<div class="form-group">
+						<input type="password" class="form-control input-sm" id="" placeholder="密码" ng-model="account.login_pwd" ng-keyup="mykeyup($event)">
+					</div>
+					<button type="button" class="btn btn-primary loginBtn" ng-click="login()" ng-keyup="mykeyup($event)">登录</button>
+				</div>
+				
+			</form>
+			<div class="right loginFoot">
+				<!-- <a href="">忘记密码</a> -->
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>

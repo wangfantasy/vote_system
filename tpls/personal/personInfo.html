@@ -1,0 +1,31 @@
+<div class="" style="height:50px;background:#fff;font-size:23px;line-height:50px;">
+<span style="margin-left:15px">编辑资料</span>
+</div>
+<form role="form" class="form-horizontal" style="margin-top:30px;">
+	<div class="form-group">
+		<label for="" class="col-sm-5 control-label">用户名</label>
+		<div class="col-sm-3">
+			<input type="text" class="form-control" id="" placeholder="用户名" ng-model="userInfo.username">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="" class="col-sm-5 control-label">邮箱</label>
+		<div class="col-sm-3">
+			<input type="email" class="form-control" id="" placeholder="邮箱" ng-model="userInfo.useremail">
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="" class="col-sm-5 control-label">手机号</label>
+		<div class="col-sm-3">
+			<input type="phone" class="form-control" id="" placeholder="手机号" ng-model="userInfo.phone">
+		</div>
+	</div>
+	<div class="form-group">
+		<div class="col-sm-offset-5 col-sm-3">
+			<button type="button" class="btn btn-default" ng-click="modifyInfo()">修改</button>
+			<button type="reset" class="btn btn-default">重置</button>
+		</div>
+	</div>
+</form>
+
+

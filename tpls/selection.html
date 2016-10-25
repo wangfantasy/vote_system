@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>新建投票对象-模板</title>
+	<script type="text/javascript" src="../js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+	<!-- Bootstrap styles-->
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<!-- Page styles-->
+	<link rel="stylesheet" href="../css/style.css" >
+</head>
+<body>
+	<button class="btn btn-default" onclick="$('#myModal1').modal('show');">click1</button>
+	<button class="btn btn-default" onclick="$('#myModal2').modal('show');">click2</button>
+	<div class="modal fade" id="myModal1">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				</div>
+				<div class="modal-body templateBody">
+					<div>选择投票对象模板</div>
+					<div>
+						<a class="btn btn-default">职称申报投票对象模板</a>
+						<a class="btn btn-default">模板2</a><br/>
+						<a class="btn btn-default">模板3</a>
+						<a class="btn btn-default">自定义模板</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal fade" id="myModal2">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+				</div>
+				<div class="modal-body voteObjForm">
+					<div>创建职称申报投票对象</div>
+					<form action="">
+						<div>
+							<table>
+								<tbody>
+									<tr class="formTop">
+										<td>申报级别：</td>
+										<td>
+											<select name="" id="" class="form-control">
+												<option value=""></option>
+											</select>
+										</td>
+									</tr>
+									<tr class="formTop">
+										<td>工号：</td>
+										<td>
+											<input type="text" class="form-control" id="" placeholder="">
+										</td>
+									</tr>
+									<tr class="formTop">
+										<td>姓名：</td>
+										<td>
+											<input type="text" class="form-control" id="" placeholder="">
+										</td>
+									</tr>
+									<tr class="formTop">
+										<td>最高学历：</td>
+										<td>
+											<select name="" id="" class="form-control">
+												<option value=""></option>
+											</select>
+										</td>
+									</tr>
+									<tr class="formTop">
+										<td>职务：</td>
+										<td>
+											<input type="text" class="form-control" id="" placeholder="">
+										</td>
+									</tr>
+									<tr class="formTop">
+										<td>现职称取得时间：</td>
+										<td>
+											<input type="text" class="form-control" id="" placeholder="">
+										</td>
+									</tr>
+									
+									<tr class="formMiddle">
+										<td>现职称取得年限：</td>
+										<td>
+											<input type="text" class="form-control" id="" placeholder="">
+											<span>（根据取得时间，系统自动计算）</span>
+										</td>
+									</tr>
+									
+									<tr class="formBottom">
+										<td>参评次数：</td>
+										<td>
+											<input type="text" class="form-control" id="" placeholder="">
+										</td>
+									</tr>
+									<tr class="formBottom">
+										<td>答辩平均分：</td>
+										<td>
+											<input type="text" class="form-control" id="" placeholder="">
+										</td>
+									</tr>
+									<tr class="formBottom">
+										<td>综合能力评分：</td>
+										<td>
+											<input type="text" class="form-control" id="" placeholder="">
+										</td>
+									</tr>
+									<tr class="formBottom">
+										<td>总分：</td>
+										<td>
+											<input type="text" class="form-control" id="" placeholder="">
+										</td>
+									</tr>
+									<tr class="formBottom">
+										<td>组别：</td>
+										<td>
+											<input type="text" class="form-control" id="" placeholder="">
+										</td>
+									</tr>
+									<tr class="formBottom">
+										<td>小组排名：</td>
+										<td>
+											<input type="text" class="form-control" id="" placeholder="">
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="photo">
+							<div><img src="" alt="照片"></div>
+							<div><a href="">点击添加图片</a></div>
+						</div>
+						<div>
+							<button type="submit" class="btn btn-default">完成</button>
+							<button type="reset" class="btn btn-default">重填</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+
+					
+</body>
+</html>

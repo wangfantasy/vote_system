@@ -1,0 +1,195 @@
+/* 用户首页样式开始 */
+/*.main_content{
+	display: flex;
+	-webkit-justify-content: space-between;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-webkit-flex-wrap: wrap;
+}*/
+.navbar{
+	background: #fff;
+	border-radius: 0;
+}
+.navbar-header img{
+	height: 54px;
+}
+
+.navbar-header .logoText{
+	display: inline-block;
+	border-left: 1px solid #ddd;
+	height: 40px;
+	margin:7px 0;
+	padding-left: 10px;
+	line-height: 40px;
+	font-size: 20px;
+	font-weight: bold;
+
+}
+
+img.navphoto{
+	width: 26px;
+	height: 26px;
+	border-radius: 13px;
+}
+@media (max-width: 768px) {
+	.navbar{
+		background: #fff;
+		border-radius: 0;
+	}
+	.navbar-header img{
+		height: 40px;
+	}
+
+	.navbar-header .logoText{
+		display: inline-block;
+		border-left: 0;
+		height: 40px;
+		margin:0;
+		padding-left: 0;
+		line-height: 40px;
+		font-size: 16px;
+		font-weight: bold;
+
+	}	
+}
+.userinfo .dropdown-menu{
+	min-width: 0;
+}
+.userinfo .dropdown-menu>li>a:focus,.userinfo .dropdown-menu>li>a:hover {
+    color: #fff;
+    background-color: #E5403F;
+    border-radius: 4px;
+    width: 110px;
+    margin:auto;
+}
+.activityBody{
+	background-color: #fff;
+}
+.homenav {
+	height: 50px;
+	font-size: 18px;
+}
+.homenav li{
+	display: inline-block;
+	position: relative;
+	z-index: 2;
+	height: 52px;	
+}
+.homenav li.active a{
+	color: #005AAB;
+	border-bottom: 3px solid #005AAB;
+}
+.homenav li>a{
+	color: #000;
+}
+.homenav li>a:hover,.homenav li>a:focus{
+	background-color: #fff;
+}
+.homenav~.line{
+	border-bottom: 1px solid #ddd;
+	height: 1px;
+	position: relative;
+	top: -3px;
+	z-index: 1;
+}
+.activityItem{
+	border:1px solid #F1F1F1;
+	margin: 40px;
+	text-align: center;
+	font-size: 20px;
+
+}
+
+.activityItem .panel-heading{
+	height: 150px;
+	line-height: 150px;
+	color: #fff;
+	font-size: 30px;
+	background-color: #46C7E7;
+}
+
+.activityItem .panel-body>div:first-child{
+	height: 75px;
+	line-height: 75px;
+	border-bottom: 1px dashed #ddd;
+	color: #A5A5A5;
+	margin:0 10px;
+}
+.activityItem .panel-body>div:last-child{
+	color: #A5A5A5;
+	height: 80px;
+	line-height: 95px;
+}
+.activityItem .panel-body>div:first-child.going{
+	color:#46C7E7;
+}
+
+/* 用户首页样式开始 */
+
+/*投票页样式开始*/
+.voteTitle{
+	line-height: 40px;
+}
+.voteTitle>div:first-child{
+	font-size: 16px;
+	margin-left: 20px;
+}
+.voteTitle .buttongroup{
+	margin-right: 10px;
+}
+.voteItem{
+	margin: 12px;
+	-webkit-box-shadow: 0px 5px 10px;
+	-moz-box-shadow: 0px 5px 10px;
+	box-shadow: 0px 5px 10px;
+}
+.voteItem .panel-body{
+	background-color: #E2EFFF;
+	position: relative;
+	height: 382px;
+	overflow-y: hidden;
+}
+.voteItem .panel-body>div:first-of-type{
+	text-align: center;
+}
+.voteItem .panel-body > img{
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.voteItem .panel-body > div > img{
+	width: 125px;
+	height: 125px;
+	margin-bottom: 20px;
+}
+
+.voteItem .panel-footer{
+	background-color: #fff;
+	font-size: 16px;
+}
+.voteItem .panel-footer>span:first-of-type{
+	color:red;
+}
+.voteItem .panel-footer input{
+	width: 15px;
+}
+.voteItem .vote_option_info{
+	height: 382px;
+	overflow-y: hidden;
+	cursor: pointer;
+}
+@keyframes hideUp {
+  from {
+      height: 100px;
+  } to {
+      height: 0;
+  }
+}
+
+div.ng-hide {
+  animation: 0.5s hideUp;
+}
+
+/*投票页样式结束*/
+ 

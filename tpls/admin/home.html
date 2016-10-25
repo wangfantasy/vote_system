@@ -1,0 +1,65 @@
+<div class="top_title" >
+</div>
+<div class="col-xs-12 " style="padding:40px;">
+<div class="manageWrap">
+	<div class="manageTitle">投票管理</div>
+	<div>
+		<div class="col-md-3 col-sm-6 home_activityItem" ng-repeat="activity in activities" ng-if="$index < 7" ng-click="viewVoteItem(activity.voteid)"><!-- #/admin/voteDetail/1097/detailInfo -->
+			<div>
+				<img src="img/notstart.jpg" alt="" ng-if="activity.state == 1" class="activityFlag">
+				<img src="img/going.jpg" alt="" ng-if="activity.state == 2" class="activityFlag">
+				<img src="img/end.jpg" alt="" ng-if="activity.state == 3" class="activityFlag">
+				<div>{{activity.votename}}</div>
+				<div class="progress">
+					<div class="progress-bar progress-bar-success" role="progressbar" ng-style="{ 'width': activity.progress + '%' }">
+	  				</div>
+				</div>
+			</div>	
+		</div>
+		<div class="col-md-3 col-sm-6 home_activityItem" ng-click="viewVoteItem(0)">
+			<div style="height:111px;">
+				<img src="img/new.png" alt="" style="display:block;margin:20px auto;">
+			</div>	
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+
+<div class="manageWrap">
+	<div class="manageTitle">用户组管理</div>
+	<div style="text-align:center;overflow:scroll;">
+		<canvas id="barChart" height="400">不支持canvas</canvas>
+	</div>
+</div>
+
+<div class="manageWrap">
+	<div class="manageTitle">管理员管理</div>
+	<div>
+		<div class="col-md-4 adminItem">
+			<div class="blue">
+				<div>
+				<img src="img/admin2.png" alt="">&nbsp;&nbsp;{{supadminNo}}&nbsp;人
+				</div>
+				<div>超级管理员</div>
+			</div>
+		</div>
+		<div class="col-md-4 adminItem">
+			<div class="cyan">
+				<div>
+				<img src="img/admin1.png" alt="">&nbsp;&nbsp;{{adminNo}}&nbsp;人
+				</div>
+				<div>普通管理员</div>
+			</div>
+		</div>
+		<div class="col-md-4 adminItem">
+			<div class="green">
+				<div>
+				<img src="img/user.png" alt="">&nbsp;&nbsp;{{userNo}}&nbsp;人
+				</div>
+				<div>普通用户</div>
+			</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+</div>
+</div>

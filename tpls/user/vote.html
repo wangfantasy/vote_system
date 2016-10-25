@@ -1,0 +1,76 @@
+<nav class="navbar navbar-default" role="navigation">
+	<div class="container-fluid">
+		<div class="col-md-10 col-md-offset-1">
+			<div class="navbar-header" style="text-align:center;">
+				<!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button> -->
+				<img src="img/logo.png" alt="logo">
+				<span class="logoText">上海飞机设计研究院投票系统</span>
+			</div>
+
+			<!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1"> -->
+				<ul class="nav navbar-nav navbar-right">
+					<li class="">
+						<form class="navbar-form navbar-left" role="search">
+						<div class="form-group">
+							<input type="search" class="form-control" placeholder="搜索投票对象" ng-model="voteOptionName">
+						</div>
+						<button type="submit" class="btn btn-default" ng-click="findVoteObj(channelId,voteOptionName)">搜索</button>
+					</form>
+					</li>
+					<li><a href="#/user/home"><img src="img/home.png" alt=""></a></li>
+					
+					<li class="dropdown userinfo">
+						<a href="" class="dropdown-toggle" data-toggle="dropdown">
+						<img src="img/avatar.jpg" alt="" class="navphoto" align="absmiddle">
+						{{$root.user.username}}<span class="caret"></span></a>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="uLabel">
+							<li><a href="#/personal/personInfo"><span class="glyphicon glyphicon-pencil"></span>&nbsp;编辑资料</a></li>
+							<!-- <li><a href="#/personal/password"><span class="glyphicon glyphicon-lock"></span>&nbsp;修改密码</a></li> -->
+							<li><a href="" ng-click="exit()"><span class="glyphicon glyphicon-log-out"></span>&nbsp;退出</a></li>
+						</ul>
+					</li>
+				</ul>
+			<!-- </div> -->
+		</div>
+	</div>
+</nav>
+<div class="container activityBody">
+	<div class="row">
+		<ul class="nav homenav">
+			<li ng-repeat="c in channels" ng-init="checkLast($last)" ng-class="{'active': channelId == c.channelid}"><a href="" ng-click="findVoteObj(c.channelid)">{{c.channelname}}</a></li>
+		</ul>
+		<div class="line"></div>
+		<div class="voteTitle">
+			<div class="col-md-6">本组投票共有  {{channelInfo.optionnum}} 名候选人，通过比例 {{channelInfo.channelratio}}% ，需投票总数： {{channelInfo.maxcount}} ，已投票：{{channelInfo.hasvote}}</div>
+			<div class="buttongroup right">
+				<!-- <button type="button" class="btn btn-default" ng-click="sortVoteObj(0)">默认排序</button>
+				<button type="button" class="btn btn-default" ng-click="sortVoteObj(1)">按得票数排序&nbsp;<span class="caret"></span></button>
+				<button type="button" class="btn btn-default" ng-click="sortVoteObj(2)">按参评次数排序&nbsp;<span class="caret"></span></button> -->
+				<button type="button" class="btn btn-info" ng-click="doVote()" ng-disabled="activity.state == 3">投票</button>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+		<div class="col-md-4 col-xs-12 col-sm-6 col-lg-3" ng-repeat="obj in voteObjs track by obj.voteoptionid">	
+			<div class="panel panel-default voteItem">
+				<div class="panel-body">
+					<img src="img/mychoice.png" alt="" ng-if="obj.hasVote == 1">
+					<div ng-hide="viewMore == 1" style="overflow:hidden;"><img src="{{obj.photo}}" alt="头像"></div>
+					<div class="vote_option_info" ng-mouseover="viewMore = 1" ng-mouseleave="viewMore = 0">
+						<p><span>{{obj.voteoptionname}}</span><span>(工号：{{obj.job_num}})</span></p>
+						<p ng-repeat="a in obj.attr">{{a.attrname}}：{{a.attrvalue}}</p>
+					</div>
+						
+				</div>
+				<div class="panel-footer">
+					<span></span>&nbsp;<span ng-if="obj.hasVote == 0">投票</span><span ng-if="obj.hasVote == 1">已投票</span>
+					<input class="right" type="checkbox" name="" value="" ng-disabled="obj.hasVote == 1" ng-model="obj.check">
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+

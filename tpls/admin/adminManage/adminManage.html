@@ -1,0 +1,148 @@
+<div class="top_title" >
+	<span style="margin-left:15px">管理员管理</span>
+</div>
+<div class="col-xs-12 " style="padding:40px;">
+	<div class="manageWrap" style="padding:30px 55px">
+		<div class="row">
+			<div class="col-sm-12 searchbar">
+				<form class="form-inline" role="form">
+					<div class="form-group">
+						<label for="">用户工号：</label> <input type="text" class="form-control"
+							id="" name="" placeholder="用户工号" ng-model="job_num">
+					</div>
+					<div class="form-group">
+						<label for="">用户姓名：</label>
+						<input class="form-control" list="usernameList" ng-model="queryData.query.userName" placeholder="用户姓名">
+						<!-- <datalist id="usernameList">
+							<option value="{{c.username}}" ng-repeat="c in creators">{{c.username}}</option>
+						</datalist> -->
+						<!-- <select name="" id="" class="form-control" ng-model="queryData.query.userName">
+							<option value="">请选择</option>
+							<option value="{{c.username}}" ng-repeat="c in creators">{{c.username}}</option>
+						</select> -->
+					</div>
+					<!-- <div class="form-group">
+						<label for="">用户角色：</label>
+						<select name="" id="" class="form-control">
+							<option value="">请选择</option>
+						</select>
+					</div> -->
+					<div class="form-group">
+						<button class="btn btn-default" ng-click="findAllAdmins()">搜索</button>
+					</div>
+					<div class="right">
+						<button class="btn btn-primary" ng-click="newAdminModal()">新建管理员</button>
+					</div>
+					<div class="clearfix"></div>
+				</form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="tableTitle"><span class="titleLeft">管理员列表</span></div>
+				<div class="table-responsive">
+				<table class="table table-striped table-hover">
+					<thead>
+						<tr>
+							<th class="col-sm-3">用户工号</th>
+							<th class="col-sm-3">姓名</th>
+							<th class="col-sm-3">角色</th>
+							<th class="col-sm-3">操作</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="a in admins">
+							<td>{{a.job_num}}</td>
+							<td>{{a.username}}</td>
+							<!-- <td ng-if="a.modify == 0">{{a.username}}</td>
+							<td ng-if="a.modify == 1"><input type="text" class="form-control" ng-model="a.username"></td> -->
+							<td ng-if="a.modify == 0">
+								<span ng-if="a.userrole == 1">普通管理员</span>
+								<span ng-if="a.userrole == 2">超级管理员</span>
+							</td>
+							<td ng-if="a.modify == 1">
+								<select name="" id="" class="form-control" ng-model="a.newuserrole" ng-init="a.newuserrole = a.userrole">
+									<option value="1">普通管理员</option>
+									<option value="2">超级管理员</option>
+								</select>
+							</td>
+							<td ng-if="a.modify == 0">
+								<a href="" ng-click="a.modify = 1">修改</a>
+								<a href="" ng-click="deleteAdmin(a)">删除</a>
+							</td>
+							<td ng-if="a.modify == 1">
+								<a href="" ng-click="modifyAdmin(a)">保存</a>
+								<a href="" ng-click="a.modify = 0">取消</a>
+							</td>
+						</tr>					
+					</tbody>
+				</table>
+			</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="newAdminModal" aria-hidden="true" data-backdrop="static">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content">
+			<div class="modal-header">
+				<span>新建管理员</span>
+				<button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+			</div>
+			<div class="modal-body voteObjForm">
+				<form action="">
+					<div>
+						<table>
+							<tbody>
+								<tr class="formTop">
+									<td>角色：</td>
+									<td>
+										<select name="" id="" class="form-control" ng-model="new.role_id">
+											<option value="1">普通管理员</option>
+											<option value="2">超级管理员</option>
+										</select>
+									</td>
+								</tr>
+								<tr class="formTop">
+									<td>工号：</td>
+									<td>
+										<!-- <input type="text" class="form-control" ng-model="autoQueryData.job_num"> -->
+										<input class="form-control" list="job_numList" ng-model="new.job_num">
+										<datalist id="job_numList">
+											<option value="{{user.job_num}}" ng-repeat="user in normalUsers">{{user.username}}</option>
+										</datalist>
+									</td>
+								</tr>
+								<tr class="formTop">
+									<td>姓名：</td>
+									<td>
+										<input type="text" class="form-control" list="nameList" ng-model="new.username">
+									</td>
+								</tr>
+								<!-- <tr class="formTop">
+									<td>公司：</td>
+									<td>
+										<select name="" id="" class="form-control">
+											<option value=""></option>
+										</select>
+									</td>
+								</tr>
+								<tr class="formTop">
+									<td>部门：</td>
+									<td>
+										<input type="text" class="form-control" id="" placeholder="">
+									</td>
+								</tr> -->
+							</tbody>
+						</table>
+					</div>
+					<div>
+						<button type="button" class="btn btn-default" ng-click="newAdmin()">完成</button>
+						<button type="reset" class="btn btn-default">重填</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

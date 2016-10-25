@@ -1,0 +1,50 @@
+<div class="top_title" >
+<span style="margin-left:15px">用户组管理</span>
+</div>
+<div class="col-xs-12 " style="padding:40px;">
+	<div class="manageWrap" style="padding:30px 55px">
+		<div class="row">		
+			<div class="col-sm-12 searchbar">
+				<form class="form-inline" role="form">
+					<div class="form-group">
+						<label for="">用户名称：</label> <input type="text" class="form-control"
+							id="" name="" placeholder="用户名称" ng-model="userName">
+					</div>
+					<div class="form-group">
+						<button class="btn btn-default" ng-click="findUsersInUserGroup(userName)">搜索</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="tableTitle"><span class="titleLeft">用户列表</span></div>
+				<div class="table-responsive">
+					<table class="table table-striped table-hover">
+						<thead>
+							<tr>
+								<th>用户名称</th>
+								<th>工号</th>
+								<th>电话</th>
+								<th>邮箱</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr ng-repeat="user in groupUsers">
+								<td>{{user.username}}</td>
+								<td>{{user.job_num}}</td>
+								<td>{{user.phone}}</td>
+								<td>{{user.useremail}}</td>
+								<td>
+									<a href="" ng-click="deleteUser(user.id)">删除</a>
+									<a href="" ng-click="resetUserPass(user.id)">重置密码</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,59 @@
+<div class="progressStatsBody">
+	<div style="text-align:right;margin:10px">
+		<form class="form-inline" role="form">
+			<!-- <div class="form-group">
+				<input type="search" class="form-control" placeholder="">
+			</div>
+			<button type="button" class="btn btn-default" ng-click="">搜索</button> -->
+			<a class="btn btn-default" ng-href="{{exportURL}}">投票结果导出</a>
+		</form>
+	</div>
+	<div class="tableStats" style="margin-top:30px;">
+		<div class="row">
+			<ul class="nav nav-pills" role="tablist">
+				<li role="presentation" ng-class="{'active': channelId == c.channelid}" ng-repeat="c in channels" ng-click="findVoteObj(c.channelid)"><a href="">{{c.channelname}}</a></li>
+			</ul>
+			<div class="table-responsive">
+				<table class="table table-striped table-hover">
+					<thead>
+						<tr>
+							<th width="80px">姓名</th>
+							<th>工号</th>
+							<th>最高学历</th>
+							<th>职务</th>
+							<th>现职称取得日期</th>
+							<th>现职称取得年限</th>
+							<th>参评次数</th>
+							<th>答辩平均分</th>
+							<th>综合能力评分</th>
+							<th>总分</th>
+							<th>组别</th>
+							<th>小组排名</th>
+							<th>得票数</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr ng-repeat="obj in voteObjs">
+							<td width="80px">{{obj.attr1}}</td>
+							<td>{{obj.attr2}}</td>
+							<td>{{obj.attr3}}</td>
+							<td>{{obj.attr4}}</td>
+							<td>{{obj.attr5}}</td>
+							<td>{{obj.attr6}}</td>
+							<td>{{obj.attr7}}</td>
+							<td>{{obj.attr8}}</td>
+							<td>{{obj.attr9}}</td>
+							<td>{{obj.attr10}}</td>
+							<td>{{obj.attr11}}</td>
+							<td>{{obj.attr12}}</td>
+							<!-- <td ng-repeat="a in obj.attr">{{a.attrvalue}}</td> -->
+							<td>{{obj.recodeNum}}</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>	
+	</div>
+</div>
+
+

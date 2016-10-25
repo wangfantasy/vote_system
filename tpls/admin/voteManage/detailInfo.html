@@ -1,0 +1,25 @@
+<div class="voteDetailBody">
+	<div class="voteDetailContent">
+		<p>
+			<span>投票主题：</span>
+			<span>{{activity.votename}} </span>
+			<span>（{{activity.type}}）</span>
+		</p>
+		<p><span>投票描述：</span><span>{{activity.exp}}</span></p>
+		<p><span>创建人：</span><span>{{activity.username}}</span></p>
+		<p><span>创建时间：</span><span>{{activity.createtime.time | date:'yyyy-MM-dd'}}</span></p>
+		<p><span>投票对象：</span>职称申报投票对象<span style="color:red;"> {{activity.voteoptionnum}} </span>人（<a href="#/admin/voteDetail/{{activity.voteid}}/resultStats" ng-click="$parent.detailUrl = '/resultStats'">点击查看</a>）</p>
+		<p><span>投票人：</span>上飞总公司用户组<span style="color:red;"> {{activity.votepernum}} </span>人（<a href="#/admin/voteDetail/{{activity.voteid}}/progressStats" ng-click="$parent.detailUrl = '/progressStats'">点击查看</a>）</p>
+		<p><span>开始时间：</span><span>{{activity.starttime.time | date:'yyyy-MM-dd HH:mm'}}</span></p>
+		<p><span>结束时间：</span><span>{{activity.endtime.time | date:'yyyy-MM-dd HH:mm'}}</span></p>
+		<p><span></span>投票历时&nbsp;<span style="color:red;">{{activity.daysRound}}天{{activity.hoursRound}}小时{{activity.minutesRound}}分钟</span>，参与投票人数&nbsp;<span style="color:red;">{{activity.totalnum}}</span>人</p>
+	</div>
+	<div class="voteDetailFoot" ng-switch on="activity.type">
+		<button class="btn btn-primary" ng-switch-when="未开始" ng-click="startVote()">开始投票</button>
+		<button class="btn btn-primary" ng-switch-when="进行中" ng-click="againVote()">重新投票</button>
+		<button class="btn btn-primary" ng-switch-when="进行中" ng-click="endVote()">结束投票</button>
+		<button class="btn btn-primary" ng-click="copyVote()">再来一次</button>
+	</div>
+</div>
+
+		
